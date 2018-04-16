@@ -1,0 +1,9 @@
+package com.zzz.study.proto;
+
+message PersonReq {
+    required string name = 1;
+    required int32 age = 2;
+}
+message PersonResp {
+    required string message = 1;
+}
