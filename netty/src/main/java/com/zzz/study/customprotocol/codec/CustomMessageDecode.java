@@ -26,6 +26,7 @@ public class CustomMessageDecode extends ByteToMessageDecoder {
 
         in.markReaderIndex();
         int readLength = in.readableBytes();
+        int startReadIndex = in.readerIndex();
         int messageLength = in.readInt();
         if (readLength < messageLength) {
             in.resetReaderIndex();
@@ -49,24 +50,27 @@ public class CustomMessageDecode extends ByteToMessageDecoder {
             protocol.setAttachment(map);
         }
         //还剩余有长度可读  就是buf的长度
-        if (in.readerIndex() < messageLength) {
-            int bufLen = messageLength - in.readerIndex();
+        if (in.readerIndex() - startReadIndex < messageLength) {
+            int bufLen = messageLength - (in.readerIndex() - startReadIndex);
             byte[] buf = new byte[bufLen];
             in.readBytes(buf);
             protocol.setBuf(buf);
-        }else{
+        } else {
             System.out.println("没有buf长度!!!");
         }
-       //释放读取了的空间
-        in.discardReadBytes();
-        System.out.println(in);
+        //释放读取了的空间
+        if (in.readerIndex() > 10240) {
+            in.discardReadBytes();
+        }
+
+        System.out.println(startReadIndex + "--->" + in);
         return protocol;
     }
 
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
         Object message = decode(ctx, in);
-        if(message != null){
+        if (message != null) {
             out.add(message);
         }
     }
