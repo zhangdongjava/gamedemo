@@ -12,6 +12,8 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
+import javax.swing.*;
+
 public class Client {
 
 
@@ -45,8 +47,9 @@ public class Client {
             // 启动客户端
             ChannelFuture f = b.connect(ip, port).sync(); // (5)
             channel = f.channel();
+            String name =  JOptionPane.showInputDialog("请输入你的昵称!");
             //登录
-            Application.getBean(LoginSendMessage.class).sendMessage("zhang");
+            Application.getBean(LoginSendMessage.class).sendMessage(name);
             // 关闭监听
             f.channel().closeFuture().addListener(future -> workerGroup.shutdownGracefully());
         } catch (Exception e) {
