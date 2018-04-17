@@ -54,4 +54,9 @@ public class MainWindow extends JFrame {
         rect.addActionListener(e-> drawPanel.changeRect());
         line.addActionListener(e-> drawPanel.changeLine());
     }
+
+    public void appendText(String name, String message) {
+        messageBox.append(name+":"+message +"\r\n");
+
+    }
 }
