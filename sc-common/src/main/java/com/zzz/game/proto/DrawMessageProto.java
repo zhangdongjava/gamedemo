@@ -4169,6 +4169,878 @@ public final class DrawMessageProto {
     // @@protoc_insertion_point(class_scope:com.zzz.game.proto.UserMessageResp)
   }
 
+  public interface ReadyReqOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 code = 1;
+    /**
+     * <code>required int32 code = 1;</code>
+     *
+     * <pre>
+     *1准备 2 取消准备
+     * </pre>
+     */
+    boolean hasCode();
+    /**
+     * <code>required int32 code = 1;</code>
+     *
+     * <pre>
+     *1准备 2 取消准备
+     * </pre>
+     */
+    int getCode();
+  }
+  /**
+   * Protobuf type {@code com.zzz.game.proto.ReadyReq}
+   */
+  public static final class ReadyReq extends
+      com.google.protobuf.GeneratedMessage
+      implements ReadyReqOrBuilder {
+    // Use ReadyReq.newBuilder() to construct.
+    private ReadyReq(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ReadyReq(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ReadyReq defaultInstance;
+    public static ReadyReq getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ReadyReq getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReadyReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              code_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_ReadyReq_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_ReadyReq_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zzz.game.proto.DrawMessageProto.ReadyReq.class, com.zzz.game.proto.DrawMessageProto.ReadyReq.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ReadyReq> PARSER =
+        new com.google.protobuf.AbstractParser<ReadyReq>() {
+      public ReadyReq parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ReadyReq(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReadyReq> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 code = 1;
+    public static final int CODE_FIELD_NUMBER = 1;
+    private int code_;
+    /**
+     * <code>required int32 code = 1;</code>
+     *
+     * <pre>
+     *1准备 2 取消准备
+     * </pre>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 code = 1;</code>
+     *
+     * <pre>
+     *1准备 2 取消准备
+     * </pre>
+     */
+    public int getCode() {
+      return code_;
+    }
+
+    private void initFields() {
+      code_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasCode()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, code_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, code_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zzz.game.proto.DrawMessageProto.ReadyReq parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyReq parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyReq parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyReq parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyReq parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyReq parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyReq parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyReq parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyReq parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyReq parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zzz.game.proto.DrawMessageProto.ReadyReq prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.zzz.game.proto.ReadyReq}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.zzz.game.proto.DrawMessageProto.ReadyReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_ReadyReq_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_ReadyReq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zzz.game.proto.DrawMessageProto.ReadyReq.class, com.zzz.game.proto.DrawMessageProto.ReadyReq.Builder.class);
+      }
+
+      // Construct using com.zzz.game.proto.DrawMessageProto.ReadyReq.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        code_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_ReadyReq_descriptor;
+      }
+
+      public com.zzz.game.proto.DrawMessageProto.ReadyReq getDefaultInstanceForType() {
+        return com.zzz.game.proto.DrawMessageProto.ReadyReq.getDefaultInstance();
+      }
+
+      public com.zzz.game.proto.DrawMessageProto.ReadyReq build() {
+        com.zzz.game.proto.DrawMessageProto.ReadyReq result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zzz.game.proto.DrawMessageProto.ReadyReq buildPartial() {
+        com.zzz.game.proto.DrawMessageProto.ReadyReq result = new com.zzz.game.proto.DrawMessageProto.ReadyReq(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.code_ = code_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zzz.game.proto.DrawMessageProto.ReadyReq) {
+          return mergeFrom((com.zzz.game.proto.DrawMessageProto.ReadyReq)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zzz.game.proto.DrawMessageProto.ReadyReq other) {
+        if (other == com.zzz.game.proto.DrawMessageProto.ReadyReq.getDefaultInstance()) return this;
+        if (other.hasCode()) {
+          setCode(other.getCode());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasCode()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zzz.game.proto.DrawMessageProto.ReadyReq parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zzz.game.proto.DrawMessageProto.ReadyReq) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 code = 1;
+      private int code_ ;
+      /**
+       * <code>required int32 code = 1;</code>
+       *
+       * <pre>
+       *1准备 2 取消准备
+       * </pre>
+       */
+      public boolean hasCode() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 code = 1;</code>
+       *
+       * <pre>
+       *1准备 2 取消准备
+       * </pre>
+       */
+      public int getCode() {
+        return code_;
+      }
+      /**
+       * <code>required int32 code = 1;</code>
+       *
+       * <pre>
+       *1准备 2 取消准备
+       * </pre>
+       */
+      public Builder setCode(int value) {
+        bitField0_ |= 0x00000001;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 code = 1;</code>
+       *
+       * <pre>
+       *1准备 2 取消准备
+       * </pre>
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        code_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.zzz.game.proto.ReadyReq)
+    }
+
+    static {
+      defaultInstance = new ReadyReq(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.zzz.game.proto.ReadyReq)
+  }
+
+  public interface ReadyRespOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 code = 3;
+    /**
+     * <code>required int32 code = 3;</code>
+     *
+     * <pre>
+     *1准备成功
+     * </pre>
+     */
+    boolean hasCode();
+    /**
+     * <code>required int32 code = 3;</code>
+     *
+     * <pre>
+     *1准备成功
+     * </pre>
+     */
+    int getCode();
+  }
+  /**
+   * Protobuf type {@code com.zzz.game.proto.ReadyResp}
+   */
+  public static final class ReadyResp extends
+      com.google.protobuf.GeneratedMessage
+      implements ReadyRespOrBuilder {
+    // Use ReadyResp.newBuilder() to construct.
+    private ReadyResp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ReadyResp(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ReadyResp defaultInstance;
+    public static ReadyResp getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ReadyResp getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReadyResp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000001;
+              code_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_ReadyResp_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_ReadyResp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zzz.game.proto.DrawMessageProto.ReadyResp.class, com.zzz.game.proto.DrawMessageProto.ReadyResp.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ReadyResp> PARSER =
+        new com.google.protobuf.AbstractParser<ReadyResp>() {
+      public ReadyResp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ReadyResp(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReadyResp> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 code = 3;
+    public static final int CODE_FIELD_NUMBER = 3;
+    private int code_;
+    /**
+     * <code>required int32 code = 3;</code>
+     *
+     * <pre>
+     *1准备成功
+     * </pre>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 code = 3;</code>
+     *
+     * <pre>
+     *1准备成功
+     * </pre>
+     */
+    public int getCode() {
+      return code_;
+    }
+
+    private void initFields() {
+      code_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasCode()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(3, code_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, code_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zzz.game.proto.DrawMessageProto.ReadyResp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyResp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyResp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyResp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyResp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyResp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyResp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyResp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyResp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zzz.game.proto.DrawMessageProto.ReadyResp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zzz.game.proto.DrawMessageProto.ReadyResp prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.zzz.game.proto.ReadyResp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.zzz.game.proto.DrawMessageProto.ReadyRespOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_ReadyResp_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_ReadyResp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zzz.game.proto.DrawMessageProto.ReadyResp.class, com.zzz.game.proto.DrawMessageProto.ReadyResp.Builder.class);
+      }
+
+      // Construct using com.zzz.game.proto.DrawMessageProto.ReadyResp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        code_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_ReadyResp_descriptor;
+      }
+
+      public com.zzz.game.proto.DrawMessageProto.ReadyResp getDefaultInstanceForType() {
+        return com.zzz.game.proto.DrawMessageProto.ReadyResp.getDefaultInstance();
+      }
+
+      public com.zzz.game.proto.DrawMessageProto.ReadyResp build() {
+        com.zzz.game.proto.DrawMessageProto.ReadyResp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zzz.game.proto.DrawMessageProto.ReadyResp buildPartial() {
+        com.zzz.game.proto.DrawMessageProto.ReadyResp result = new com.zzz.game.proto.DrawMessageProto.ReadyResp(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.code_ = code_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zzz.game.proto.DrawMessageProto.ReadyResp) {
+          return mergeFrom((com.zzz.game.proto.DrawMessageProto.ReadyResp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zzz.game.proto.DrawMessageProto.ReadyResp other) {
+        if (other == com.zzz.game.proto.DrawMessageProto.ReadyResp.getDefaultInstance()) return this;
+        if (other.hasCode()) {
+          setCode(other.getCode());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasCode()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zzz.game.proto.DrawMessageProto.ReadyResp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zzz.game.proto.DrawMessageProto.ReadyResp) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 code = 3;
+      private int code_ ;
+      /**
+       * <code>required int32 code = 3;</code>
+       *
+       * <pre>
+       *1准备成功
+       * </pre>
+       */
+      public boolean hasCode() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 code = 3;</code>
+       *
+       * <pre>
+       *1准备成功
+       * </pre>
+       */
+      public int getCode() {
+        return code_;
+      }
+      /**
+       * <code>required int32 code = 3;</code>
+       *
+       * <pre>
+       *1准备成功
+       * </pre>
+       */
+      public Builder setCode(int value) {
+        bitField0_ |= 0x00000001;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 code = 3;</code>
+       *
+       * <pre>
+       *1准备成功
+       * </pre>
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        code_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.zzz.game.proto.ReadyResp)
+    }
+
+    static {
+      defaultInstance = new ReadyResp(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.zzz.game.proto.ReadyResp)
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_zzz_game_proto_LoginReq_descriptor;
   private static
@@ -4204,6 +5076,16 @@ public final class DrawMessageProto {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_zzz_game_proto_UserMessageResp_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_zzz_game_proto_ReadyReq_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_zzz_game_proto_ReadyReq_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_zzz_game_proto_ReadyResp_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_zzz_game_proto_ReadyResp_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4222,7 +5104,8 @@ public final class DrawMessageProto {
       "2\030\003 \001(\005\022\n\n\002y2\030\004 \001(\005\022\014\n\004type\030\005 \002(\005\"!\n\016Use" +
       "rMessageReq\022\017\n\007message\030\001 \002(\t\"@\n\017UserMess" +
       "ageResp\022\017\n\007message\030\001 \002(\t\022\014\n\004name\030\002 \002(\t\022\016" +
-      "\n\006userId\030\003 \002(\005"
+      "\n\006userId\030\003 \002(\005\"\030\n\010ReadyReq\022\014\n\004code\030\001 \002(\005",
+      "\"\031\n\tReadyResp\022\014\n\004code\030\003 \002(\005"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -4271,6 +5154,18 @@ public final class DrawMessageProto {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zzz_game_proto_UserMessageResp_descriptor,
               new java.lang.String[] { "Message", "Name", "UserId", });
+          internal_static_com_zzz_game_proto_ReadyReq_descriptor =
+            getDescriptor().getMessageTypes().get(6);
+          internal_static_com_zzz_game_proto_ReadyReq_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_zzz_game_proto_ReadyReq_descriptor,
+              new java.lang.String[] { "Code", });
+          internal_static_com_zzz_game_proto_ReadyResp_descriptor =
+            getDescriptor().getMessageTypes().get(7);
+          internal_static_com_zzz_game_proto_ReadyResp_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_zzz_game_proto_ReadyResp_descriptor,
+              new java.lang.String[] { "Code", });
           return null;
         }
       };

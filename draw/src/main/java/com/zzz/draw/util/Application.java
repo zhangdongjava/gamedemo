@@ -1,9 +1,6 @@
 package com.zzz.draw.util;
 
-import com.zzz.draw.client.handler.LineMessageHandler;
-import com.zzz.draw.client.handler.LoginMessageHandler;
-import com.zzz.draw.client.handler.RectMessageHandler;
-import com.zzz.draw.client.handler.UserMessageHandler;
+import com.zzz.draw.client.handler.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,6 +19,7 @@ public class Application {
         nameMap.put("handler_3", new RectMessageHandler());
         nameMap.put("handler_1", new LoginMessageHandler());
         nameMap.put("handler_4", new UserMessageHandler());
+        nameMap.put("handler_5", new DrawPlayerMessageHandler());
     }
 
     public static void putBean(Object bean) {

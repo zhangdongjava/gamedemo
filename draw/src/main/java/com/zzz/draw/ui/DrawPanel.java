@@ -20,9 +20,9 @@ public class DrawPanel extends JPanel {
 
     public DrawPanel() {
         this.setSize(600, 563);
-        Shape shape = new ShapeLine(this);
+        //   Shape shape = new ShapeLine(this);
+        //  changeShape(shape);
         this.setBackground(Color.white);
-        changeShape(shape);
         Application.putBean(this);
     }
 
@@ -35,7 +35,10 @@ public class DrawPanel extends JPanel {
         if (image != null) {
             g.drawImage(image, 0, 0, null);
         }
-        shape.draw(g);
+        if(shape != null){
+            shape.draw(g);
+        }
+
     }
 
     public void drawLine(Point point1, Point point2) {
@@ -94,6 +97,14 @@ public class DrawPanel extends JPanel {
         Graphics g = curr.getGraphics();
         g.setColor(Color.white);
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
+    }
+
+    public void notDraw() {
+        if (this.shape != null) {
+            this.removeMouseListener(this.shape);
+            this.removeMouseMotionListener(this.shape);
+            this.shape = null;
+        }
     }
 
     public void changeLine() {

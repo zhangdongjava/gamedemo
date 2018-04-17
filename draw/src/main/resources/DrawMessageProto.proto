@@ -33,3 +33,10 @@ message UserMessageResp{
     required string name = 2;//消息人昵称
     required int32 userId = 3;//消息人ID
 }
+message ReadyReq{
+    required int32 code = 1;//1准备 2 取消准备
+}
+
+message ReadyResp{
+    required int32 code = 3;//1准备成功
+}

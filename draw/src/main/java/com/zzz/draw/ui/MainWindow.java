@@ -1,5 +1,6 @@
 package com.zzz.draw.ui;
 
+import com.zzz.draw.client.send.MessageSendMessage;
 import com.zzz.draw.util.Application;
 
 import javax.swing.*;
@@ -53,6 +54,9 @@ public class MainWindow extends JFrame {
     private void initEvent(){
         rect.addActionListener(e-> drawPanel.changeRect());
         line.addActionListener(e-> drawPanel.changeLine());
+        send.addActionListener(e->{
+            Application.getBean(MessageSendMessage.class).sendMessage(message.getText());
+        });
     }
 
     public void appendText(String name, String message) {

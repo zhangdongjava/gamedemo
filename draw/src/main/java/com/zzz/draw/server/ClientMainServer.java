@@ -10,7 +10,7 @@ public class ClientMainServer {
 
     public static void main(String[] args) {
         Client client = new Client();
-        client.content("192.168.10.59",1231);
+        client.content("192.168.10.76",1231);
         new MainWindow();
     }
 }
