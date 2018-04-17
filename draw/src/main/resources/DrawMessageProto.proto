@@ -1,0 +1,16 @@
+package com.zzz.game.proto;
+
+message LoginReq {
+    required string name = 1;
+}
+message LoginResp {
+    required int32 id = 1;
+}
+
+message DrawLineReq {
+    message point {
+        required int32 x = 1;
+        required int32 y = 2;
+    }
+    repeated point points = 1;
+}
