@@ -18,7 +18,7 @@ public abstract class AbstractMessageHandler implements MessageHandler {
             e.printStackTrace();
         }
         if (messageLite != null) {
-            message.setBuf(message.getBuf());
+            message.setBuf(messageLite.toByteArray());
             ctx.writeAndFlush(message);
         }
     }

@@ -14,3 +14,12 @@ message DrawLineReq {
     }
     repeated point points = 1;
 }
+
+message DrawRectReq {
+    optional int32 x1 = 1;
+    optional int32 y1 = 2;
+    optional int32 x2 = 3;
+    optional int32 y2 = 4;
+    required int32 type = 5;//0画图中 1结束
+
+}

@@ -8,6 +8,8 @@ import com.zzz.game.proto.DrawMessageProto;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.AttributeKey;
 
+import java.util.Arrays;
+
 /**
  * Created by zha on 2018/4/17.
  */
@@ -22,9 +24,9 @@ public class LoginMessageHandler extends AbstractMessageHandler {
         AttributeKey<Integer> attributeKey = AttributeKey.valueOf("userId");
         ctx.channel().attr(attributeKey).set(userId);
         message.setSessionId(userId);
-        System.out.println("返回"+userId);
-        return DrawMessageProto.LoginResp.newBuilder()
+        DrawMessageProto.LoginResp resp = DrawMessageProto.LoginResp.newBuilder()
                 .setId(userId)
                 .build();
+        return resp;
     }
 }

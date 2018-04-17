@@ -2,6 +2,7 @@ package com.zzz.draw.util;
 
 import com.zzz.draw.client.handler.LineMessageHandler;
 import com.zzz.draw.client.handler.LoginMessageHandler;
+import com.zzz.draw.client.handler.RectMessageHandler;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,6 +18,7 @@ public class Application {
 
     static {
         nameMap.put("handler_2", new LineMessageHandler());
+        nameMap.put("handler_3", new RectMessageHandler());
         nameMap.put("handler_1", new LoginMessageHandler());
     }
 

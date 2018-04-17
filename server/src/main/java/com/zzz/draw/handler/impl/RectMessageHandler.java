@@ -7,14 +7,13 @@ import com.zzz.draw.server.ServerApplication;
 import com.zzz.game.message.ProtocolMessage;
 import io.netty.channel.ChannelHandlerContext;
 
-import javax.annotation.Resource;
 import java.util.Collection;
 
 /**
  * Created by zha on 2018/4/17.
  */
 
-public class LineMessageHandler extends AbstractMessageHandler {
+public class RectMessageHandler extends AbstractMessageHandler {
 
     @Override
     protected MessageLite exec(ChannelHandlerContext ctx, ProtocolMessage message) throws Exception {

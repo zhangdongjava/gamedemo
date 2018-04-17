@@ -8,6 +8,7 @@ import com.zzz.game.message.ProtocolMessage;
 import com.zzz.game.proto.DrawMessageProto;
 
 import java.awt.*;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,6 +20,8 @@ public class LoginMessageHandler implements MessageHandler {
 
     @Override
     public void handler(ProtocolMessage message) throws Exception {
-        Application.getBean(Client.class).getUserInfo().setId(message.getSessionId());
+        DrawMessageProto.LoginResp resp = DrawMessageProto.LoginResp.parseFrom(message.getBuf());
+        Application.getBean(Client.class).getUserInfo().setId(resp.getId());
+
     }
 }
