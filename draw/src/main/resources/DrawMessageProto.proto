@@ -31,5 +31,5 @@ message UserMessageReq{
 message UserMessageResp{
     required string message = 1;//消息
     required string name = 2;//消息人昵称
-    required string userId = 3;//消息人ID
+    required int32 userId = 3;//消息人ID
 }

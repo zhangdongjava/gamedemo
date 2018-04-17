@@ -3315,14 +3315,26 @@ public final class DrawMessageProto {
     // required string message = 1;
     /**
      * <code>required string message = 1;</code>
+     *
+     * <pre>
+     *消息
+     * </pre>
      */
     boolean hasMessage();
     /**
      * <code>required string message = 1;</code>
+     *
+     * <pre>
+     *消息
+     * </pre>
      */
     java.lang.String getMessage();
     /**
      * <code>required string message = 1;</code>
+     *
+     * <pre>
+     *消息
+     * </pre>
      */
     com.google.protobuf.ByteString
         getMessageBytes();
@@ -3330,17 +3342,47 @@ public final class DrawMessageProto {
     // required string name = 2;
     /**
      * <code>required string name = 2;</code>
+     *
+     * <pre>
+     *消息人昵称
+     * </pre>
      */
     boolean hasName();
     /**
      * <code>required string name = 2;</code>
+     *
+     * <pre>
+     *消息人昵称
+     * </pre>
      */
     java.lang.String getName();
     /**
      * <code>required string name = 2;</code>
+     *
+     * <pre>
+     *消息人昵称
+     * </pre>
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    // required int32 userId = 3;
+    /**
+     * <code>required int32 userId = 3;</code>
+     *
+     * <pre>
+     *消息人ID
+     * </pre>
+     */
+    boolean hasUserId();
+    /**
+     * <code>required int32 userId = 3;</code>
+     *
+     * <pre>
+     *消息人ID
+     * </pre>
+     */
+    int getUserId();
   }
   /**
    * Protobuf type {@code com.zzz.game.proto.UserMessageResp}
@@ -3403,6 +3445,11 @@ public final class DrawMessageProto {
               name_ = input.readBytes();
               break;
             }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              userId_ = input.readInt32();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3448,12 +3495,20 @@ public final class DrawMessageProto {
     private java.lang.Object message_;
     /**
      * <code>required string message = 1;</code>
+     *
+     * <pre>
+     *消息
+     * </pre>
      */
     public boolean hasMessage() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
      * <code>required string message = 1;</code>
+     *
+     * <pre>
+     *消息
+     * </pre>
      */
     public java.lang.String getMessage() {
       java.lang.Object ref = message_;
@@ -3471,6 +3526,10 @@ public final class DrawMessageProto {
     }
     /**
      * <code>required string message = 1;</code>
+     *
+     * <pre>
+     *消息
+     * </pre>
      */
     public com.google.protobuf.ByteString
         getMessageBytes() {
@@ -3491,12 +3550,20 @@ public final class DrawMessageProto {
     private java.lang.Object name_;
     /**
      * <code>required string name = 2;</code>
+     *
+     * <pre>
+     *消息人昵称
+     * </pre>
      */
     public boolean hasName() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
      * <code>required string name = 2;</code>
+     *
+     * <pre>
+     *消息人昵称
+     * </pre>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -3514,6 +3581,10 @@ public final class DrawMessageProto {
     }
     /**
      * <code>required string name = 2;</code>
+     *
+     * <pre>
+     *消息人昵称
+     * </pre>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -3529,9 +3600,34 @@ public final class DrawMessageProto {
       }
     }
 
+    // required int32 userId = 3;
+    public static final int USERID_FIELD_NUMBER = 3;
+    private int userId_;
+    /**
+     * <code>required int32 userId = 3;</code>
+     *
+     * <pre>
+     *消息人ID
+     * </pre>
+     */
+    public boolean hasUserId() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int32 userId = 3;</code>
+     *
+     * <pre>
+     *消息人ID
+     * </pre>
+     */
+    public int getUserId() {
+      return userId_;
+    }
+
     private void initFields() {
       message_ = "";
       name_ = "";
+      userId_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3543,6 +3639,10 @@ public final class DrawMessageProto {
         return false;
       }
       if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasUserId()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -3558,6 +3658,9 @@ public final class DrawMessageProto {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBytes(2, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, userId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3575,6 +3678,10 @@ public final class DrawMessageProto {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, userId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3696,6 +3803,8 @@ public final class DrawMessageProto {
         bitField0_ = (bitField0_ & ~0x00000001);
         name_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
+        userId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -3732,6 +3841,10 @@ public final class DrawMessageProto {
           to_bitField0_ |= 0x00000002;
         }
         result.name_ = name_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.userId_ = userId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3758,6 +3871,9 @@ public final class DrawMessageProto {
           name_ = other.name_;
           onChanged();
         }
+        if (other.hasUserId()) {
+          setUserId(other.getUserId());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -3768,6 +3884,10 @@ public final class DrawMessageProto {
           return false;
         }
         if (!hasName()) {
+          
+          return false;
+        }
+        if (!hasUserId()) {
           
           return false;
         }
@@ -3797,12 +3917,20 @@ public final class DrawMessageProto {
       private java.lang.Object message_ = "";
       /**
        * <code>required string message = 1;</code>
+       *
+       * <pre>
+       *消息
+       * </pre>
        */
       public boolean hasMessage() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
        * <code>required string message = 1;</code>
+       *
+       * <pre>
+       *消息
+       * </pre>
        */
       public java.lang.String getMessage() {
         java.lang.Object ref = message_;
@@ -3817,6 +3945,10 @@ public final class DrawMessageProto {
       }
       /**
        * <code>required string message = 1;</code>
+       *
+       * <pre>
+       *消息
+       * </pre>
        */
       public com.google.protobuf.ByteString
           getMessageBytes() {
@@ -3833,6 +3965,10 @@ public final class DrawMessageProto {
       }
       /**
        * <code>required string message = 1;</code>
+       *
+       * <pre>
+       *消息
+       * </pre>
        */
       public Builder setMessage(
           java.lang.String value) {
@@ -3846,6 +3982,10 @@ public final class DrawMessageProto {
       }
       /**
        * <code>required string message = 1;</code>
+       *
+       * <pre>
+       *消息
+       * </pre>
        */
       public Builder clearMessage() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -3855,6 +3995,10 @@ public final class DrawMessageProto {
       }
       /**
        * <code>required string message = 1;</code>
+       *
+       * <pre>
+       *消息
+       * </pre>
        */
       public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
@@ -3871,12 +4015,20 @@ public final class DrawMessageProto {
       private java.lang.Object name_ = "";
       /**
        * <code>required string name = 2;</code>
+       *
+       * <pre>
+       *消息人昵称
+       * </pre>
        */
       public boolean hasName() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
        * <code>required string name = 2;</code>
+       *
+       * <pre>
+       *消息人昵称
+       * </pre>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3891,6 +4043,10 @@ public final class DrawMessageProto {
       }
       /**
        * <code>required string name = 2;</code>
+       *
+       * <pre>
+       *消息人昵称
+       * </pre>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3907,6 +4063,10 @@ public final class DrawMessageProto {
       }
       /**
        * <code>required string name = 2;</code>
+       *
+       * <pre>
+       *消息人昵称
+       * </pre>
        */
       public Builder setName(
           java.lang.String value) {
@@ -3920,6 +4080,10 @@ public final class DrawMessageProto {
       }
       /**
        * <code>required string name = 2;</code>
+       *
+       * <pre>
+       *消息人昵称
+       * </pre>
        */
       public Builder clearName() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -3929,6 +4093,10 @@ public final class DrawMessageProto {
       }
       /**
        * <code>required string name = 2;</code>
+       *
+       * <pre>
+       *消息人昵称
+       * </pre>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3937,6 +4105,55 @@ public final class DrawMessageProto {
   }
   bitField0_ |= 0x00000002;
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required int32 userId = 3;
+      private int userId_ ;
+      /**
+       * <code>required int32 userId = 3;</code>
+       *
+       * <pre>
+       *消息人ID
+       * </pre>
+       */
+      public boolean hasUserId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int32 userId = 3;</code>
+       *
+       * <pre>
+       *消息人ID
+       * </pre>
+       */
+      public int getUserId() {
+        return userId_;
+      }
+      /**
+       * <code>required int32 userId = 3;</code>
+       *
+       * <pre>
+       *消息人ID
+       * </pre>
+       */
+      public Builder setUserId(int value) {
+        bitField0_ |= 0x00000004;
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 userId = 3;</code>
+       *
+       * <pre>
+       *消息人ID
+       * </pre>
+       */
+      public Builder clearUserId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        userId_ = 0;
         onChanged();
         return this;
       }
@@ -4003,8 +4220,9 @@ public final class DrawMessageProto {
       "point\032\035\n\005point\022\t\n\001x\030\001 \002(\005\022\t\n\001y\030\002 \002(\005\"K\n\013" +
       "DrawRectReq\022\n\n\002x1\030\001 \001(\005\022\n\n\002y1\030\002 \001(\005\022\n\n\002x" +
       "2\030\003 \001(\005\022\n\n\002y2\030\004 \001(\005\022\014\n\004type\030\005 \002(\005\"!\n\016Use" +
-      "rMessageReq\022\017\n\007message\030\001 \002(\t\"0\n\017UserMess" +
-      "ageResp\022\017\n\007message\030\001 \002(\t\022\014\n\004name\030\002 \002(\t"
+      "rMessageReq\022\017\n\007message\030\001 \002(\t\"@\n\017UserMess" +
+      "ageResp\022\017\n\007message\030\001 \002(\t\022\014\n\004name\030\002 \002(\t\022\016" +
+      "\n\006userId\030\003 \002(\005"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -4052,7 +4270,7 @@ public final class DrawMessageProto {
           internal_static_com_zzz_game_proto_UserMessageResp_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zzz_game_proto_UserMessageResp_descriptor,
-              new java.lang.String[] { "Message", "Name", });
+              new java.lang.String[] { "Message", "Name", "UserId", });
           return null;
         }
       };

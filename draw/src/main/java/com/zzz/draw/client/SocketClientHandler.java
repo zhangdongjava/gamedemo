@@ -19,7 +19,7 @@ public class SocketClientHandler extends ChannelInboundHandlerAdapter { // (1)
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-
+        System.out.println("连接激活");
     }
 
     @Override
