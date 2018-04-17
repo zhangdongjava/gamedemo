@@ -38,5 +38,5 @@ message ReadyReq{
 }
 
 message ReadyResp{
-    required int32 code = 3;//1准备成功
+    required int32 code = 1;//1准备成功
 }
