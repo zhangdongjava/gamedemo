@@ -1,0 +1,10 @@
+package com.zzz.game.proto;
+
+enum MessageType{
+    LOGIN = 1;//登录
+    DRAW_LINE = 2;//划线
+    DRAW_RECT = 3;//花矩形
+    USER_MESSAGE = 4;//用户说话
+    DRAW_PLAYER = 5;//谁画画
+    TIME_COUNT = 6;//开始倒计时
+}

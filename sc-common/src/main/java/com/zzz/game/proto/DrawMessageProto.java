@@ -4608,9 +4608,9 @@ public final class DrawMessageProto {
   public interface ReadyRespOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required int32 code = 1;
+    // required int32 code = 3;
     /**
-     * <code>required int32 code = 1;</code>
+     * <code>required int32 code = 3;</code>
      *
      * <pre>
      *1准备成功
@@ -4618,7 +4618,7 @@ public final class DrawMessageProto {
      */
     boolean hasCode();
     /**
-     * <code>required int32 code = 1;</code>
+     * <code>required int32 code = 3;</code>
      *
      * <pre>
      *1准备成功
@@ -4677,7 +4677,7 @@ public final class DrawMessageProto {
               }
               break;
             }
-            case 8: {
+            case 24: {
               bitField0_ |= 0x00000001;
               code_ = input.readInt32();
               break;
@@ -4722,11 +4722,11 @@ public final class DrawMessageProto {
     }
 
     private int bitField0_;
-    // required int32 code = 1;
-    public static final int CODE_FIELD_NUMBER = 1;
+    // required int32 code = 3;
+    public static final int CODE_FIELD_NUMBER = 3;
     private int code_;
     /**
-     * <code>required int32 code = 1;</code>
+     * <code>required int32 code = 3;</code>
      *
      * <pre>
      *1准备成功
@@ -4736,7 +4736,7 @@ public final class DrawMessageProto {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 code = 1;</code>
+     * <code>required int32 code = 3;</code>
      *
      * <pre>
      *1准备成功
@@ -4766,7 +4766,7 @@ public final class DrawMessageProto {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, code_);
+        output.writeInt32(3, code_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4779,7 +4779,7 @@ public final class DrawMessageProto {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, code_);
+          .computeInt32Size(3, code_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4981,10 +4981,10 @@ public final class DrawMessageProto {
       }
       private int bitField0_;
 
-      // required int32 code = 1;
+      // required int32 code = 3;
       private int code_ ;
       /**
-       * <code>required int32 code = 1;</code>
+       * <code>required int32 code = 3;</code>
        *
        * <pre>
        *1准备成功
@@ -4994,7 +4994,7 @@ public final class DrawMessageProto {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 code = 1;</code>
+       * <code>required int32 code = 3;</code>
        *
        * <pre>
        *1准备成功
@@ -5004,7 +5004,7 @@ public final class DrawMessageProto {
         return code_;
       }
       /**
-       * <code>required int32 code = 1;</code>
+       * <code>required int32 code = 3;</code>
        *
        * <pre>
        *1准备成功
@@ -5017,7 +5017,7 @@ public final class DrawMessageProto {
         return this;
       }
       /**
-       * <code>required int32 code = 1;</code>
+       * <code>required int32 code = 3;</code>
        *
        * <pre>
        *1准备成功
@@ -5039,442 +5039,6 @@ public final class DrawMessageProto {
     }
 
     // @@protoc_insertion_point(class_scope:com.zzz.game.proto.ReadyResp)
-  }
-
-  public interface TimeLimitRespOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-
-    // required int32 time = 1;
-    /**
-     * <code>required int32 time = 1;</code>
-     *
-     * <pre>
-     *倒计时
-     * </pre>
-     */
-    boolean hasTime();
-    /**
-     * <code>required int32 time = 1;</code>
-     *
-     * <pre>
-     *倒计时
-     * </pre>
-     */
-    int getTime();
-  }
-  /**
-   * Protobuf type {@code com.zzz.game.proto.TimeLimitResp}
-   */
-  public static final class TimeLimitResp extends
-      com.google.protobuf.GeneratedMessage
-      implements TimeLimitRespOrBuilder {
-    // Use TimeLimitResp.newBuilder() to construct.
-    private TimeLimitResp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private TimeLimitResp(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final TimeLimitResp defaultInstance;
-    public static TimeLimitResp getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public TimeLimitResp getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TimeLimitResp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              time_ = input.readInt32();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_TimeLimitResp_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_TimeLimitResp_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zzz.game.proto.DrawMessageProto.TimeLimitResp.class, com.zzz.game.proto.DrawMessageProto.TimeLimitResp.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<TimeLimitResp> PARSER =
-        new com.google.protobuf.AbstractParser<TimeLimitResp>() {
-      public TimeLimitResp parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TimeLimitResp(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TimeLimitResp> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    // required int32 time = 1;
-    public static final int TIME_FIELD_NUMBER = 1;
-    private int time_;
-    /**
-     * <code>required int32 time = 1;</code>
-     *
-     * <pre>
-     *倒计时
-     * </pre>
-     */
-    public boolean hasTime() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required int32 time = 1;</code>
-     *
-     * <pre>
-     *倒计时
-     * </pre>
-     */
-    public int getTime() {
-      return time_;
-    }
-
-    private void initFields() {
-      time_ = 0;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      if (!hasTime()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, time_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, time_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.zzz.game.proto.DrawMessageProto.TimeLimitResp parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zzz.game.proto.DrawMessageProto.TimeLimitResp parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zzz.game.proto.DrawMessageProto.TimeLimitResp parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zzz.game.proto.DrawMessageProto.TimeLimitResp parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zzz.game.proto.DrawMessageProto.TimeLimitResp parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zzz.game.proto.DrawMessageProto.TimeLimitResp parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.zzz.game.proto.DrawMessageProto.TimeLimitResp parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.zzz.game.proto.DrawMessageProto.TimeLimitResp parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.zzz.game.proto.DrawMessageProto.TimeLimitResp parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zzz.game.proto.DrawMessageProto.TimeLimitResp parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.zzz.game.proto.DrawMessageProto.TimeLimitResp prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code com.zzz.game.proto.TimeLimitResp}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.zzz.game.proto.DrawMessageProto.TimeLimitRespOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_TimeLimitResp_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_TimeLimitResp_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zzz.game.proto.DrawMessageProto.TimeLimitResp.class, com.zzz.game.proto.DrawMessageProto.TimeLimitResp.Builder.class);
-      }
-
-      // Construct using com.zzz.game.proto.DrawMessageProto.TimeLimitResp.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        time_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zzz.game.proto.DrawMessageProto.internal_static_com_zzz_game_proto_TimeLimitResp_descriptor;
-      }
-
-      public com.zzz.game.proto.DrawMessageProto.TimeLimitResp getDefaultInstanceForType() {
-        return com.zzz.game.proto.DrawMessageProto.TimeLimitResp.getDefaultInstance();
-      }
-
-      public com.zzz.game.proto.DrawMessageProto.TimeLimitResp build() {
-        com.zzz.game.proto.DrawMessageProto.TimeLimitResp result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.zzz.game.proto.DrawMessageProto.TimeLimitResp buildPartial() {
-        com.zzz.game.proto.DrawMessageProto.TimeLimitResp result = new com.zzz.game.proto.DrawMessageProto.TimeLimitResp(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.time_ = time_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zzz.game.proto.DrawMessageProto.TimeLimitResp) {
-          return mergeFrom((com.zzz.game.proto.DrawMessageProto.TimeLimitResp)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zzz.game.proto.DrawMessageProto.TimeLimitResp other) {
-        if (other == com.zzz.game.proto.DrawMessageProto.TimeLimitResp.getDefaultInstance()) return this;
-        if (other.hasTime()) {
-          setTime(other.getTime());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasTime()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zzz.game.proto.DrawMessageProto.TimeLimitResp parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zzz.game.proto.DrawMessageProto.TimeLimitResp) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      // required int32 time = 1;
-      private int time_ ;
-      /**
-       * <code>required int32 time = 1;</code>
-       *
-       * <pre>
-       *倒计时
-       * </pre>
-       */
-      public boolean hasTime() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required int32 time = 1;</code>
-       *
-       * <pre>
-       *倒计时
-       * </pre>
-       */
-      public int getTime() {
-        return time_;
-      }
-      /**
-       * <code>required int32 time = 1;</code>
-       *
-       * <pre>
-       *倒计时
-       * </pre>
-       */
-      public Builder setTime(int value) {
-        bitField0_ |= 0x00000001;
-        time_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 time = 1;</code>
-       *
-       * <pre>
-       *倒计时
-       * </pre>
-       */
-      public Builder clearTime() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        time_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.zzz.game.proto.TimeLimitResp)
-    }
-
-    static {
-      defaultInstance = new TimeLimitResp(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:com.zzz.game.proto.TimeLimitResp)
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
@@ -5522,11 +5086,6 @@ public final class DrawMessageProto {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_zzz_game_proto_ReadyResp_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_zzz_game_proto_TimeLimitResp_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_zzz_game_proto_TimeLimitResp_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5546,8 +5105,7 @@ public final class DrawMessageProto {
       "rMessageReq\022\017\n\007message\030\001 \002(\t\"@\n\017UserMess" +
       "ageResp\022\017\n\007message\030\001 \002(\t\022\014\n\004name\030\002 \002(\t\022\016" +
       "\n\006userId\030\003 \002(\005\"\030\n\010ReadyReq\022\014\n\004code\030\001 \002(\005",
-      "\"\031\n\tReadyResp\022\014\n\004code\030\001 \002(\005\"\035\n\rTimeLimit" +
-      "Resp\022\014\n\004time\030\001 \002(\005"
+      "\"\031\n\tReadyResp\022\014\n\004code\030\003 \002(\005"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -5608,12 +5166,6 @@ public final class DrawMessageProto {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zzz_game_proto_ReadyResp_descriptor,
               new java.lang.String[] { "Code", });
-          internal_static_com_zzz_game_proto_TimeLimitResp_descriptor =
-            getDescriptor().getMessageTypes().get(8);
-          internal_static_com_zzz_game_proto_TimeLimitResp_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_com_zzz_game_proto_TimeLimitResp_descriptor,
-              new java.lang.String[] { "Time", });
           return null;
         }
       };
