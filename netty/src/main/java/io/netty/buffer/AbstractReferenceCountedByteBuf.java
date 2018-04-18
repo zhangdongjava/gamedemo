@@ -62,6 +62,7 @@ public abstract class AbstractReferenceCountedByteBuf extends AbstractByteBuf {
     private ByteBuf retain0(final int increment) {
         int oldRef = refCntUpdater.getAndAdd(this, increment);
         if (oldRef <= 0 || oldRef + increment < oldRef) {
+            //确认我们不会复活                                              我们也遇到了溢出
             // Ensure we don't resurrect (which means the refCnt was 0) and also that we encountered an overflow.
             refCntUpdater.getAndAdd(this, -increment);
             throw new IllegalReferenceCountException(oldRef, increment);
@@ -91,6 +92,7 @@ public abstract class AbstractReferenceCountedByteBuf extends AbstractByteBuf {
 
     private boolean release0(int decrement) {
         int oldRef = refCntUpdater.getAndAdd(this, -decrement);
+        //如果原来剩余的引用等于要减去的 表示没有引用就释放
         if (oldRef == decrement) {
             deallocate();
             return true;
