@@ -40,6 +40,6 @@ message ReadyReq{
 message ReadyResp{
     required int32 code = 1;//1准备成功
 }
-message TimeLimitResp{     
+message TimeLimitResp{      
     required int32 time = 1;//倒计时
 }
