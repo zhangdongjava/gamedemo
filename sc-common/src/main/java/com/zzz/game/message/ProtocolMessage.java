@@ -1,8 +1,5 @@
 package com.zzz.game.message;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by zha on 2018/4/14.
  */
