@@ -61,6 +61,14 @@ public final class TypeMessageEnumProto {
      * </pre>
      */
     TIME_COUNT(5, 6),
+    /**
+     * <code>READY = 7;</code>
+     *
+     * <pre>
+     *准备和取消准备
+     * </pre>
+     */
+    READY(6, 7),
     ;
 
     /**
@@ -111,6 +119,14 @@ public final class TypeMessageEnumProto {
      * </pre>
      */
     public static final int TIME_COUNT_VALUE = 6;
+    /**
+     * <code>READY = 7;</code>
+     *
+     * <pre>
+     *准备和取消准备
+     * </pre>
+     */
+    public static final int READY_VALUE = 7;
 
 
     public final int getNumber() { return value; }
@@ -123,6 +139,7 @@ public final class TypeMessageEnumProto {
         case 4: return USER_MESSAGE;
         case 5: return DRAW_PLAYER;
         case 6: return TIME_COUNT;
+        case 7: return READY;
         default: return null;
       }
     }
@@ -184,9 +201,10 @@ public final class TypeMessageEnumProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\032TypeMessageEnumProto.proto\022\022com.zzz.ga" +
-      "me.proto*i\n\013MessageType\022\t\n\005LOGIN\020\001\022\r\n\tDR" +
+      "me.proto*t\n\013MessageType\022\t\n\005LOGIN\020\001\022\r\n\tDR" +
       "AW_LINE\020\002\022\r\n\tDRAW_RECT\020\003\022\020\n\014USER_MESSAGE" +
-      "\020\004\022\017\n\013DRAW_PLAYER\020\005\022\016\n\nTIME_COUNT\020\006"
+      "\020\004\022\017\n\013DRAW_PLAYER\020\005\022\016\n\nTIME_COUNT\020\006\022\t\n\005R" +
+      "EADY\020\007"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

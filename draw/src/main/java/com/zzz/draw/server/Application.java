@@ -22,6 +22,7 @@ public class Application {
         putBean("handler_1", new LoginMessageHandler());
         putBean("handler_4", new UserMessageHandler());
         putBean("handler_5", new DrawPlayerMessageHandler());
+        putBean("handler_7", new ReadyMessageHandler());
     }
 
     public static void putBean(Object bean) {

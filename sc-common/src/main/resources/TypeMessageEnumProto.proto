@@ -7,4 +7,5 @@ enum MessageType{
     USER_MESSAGE = 4;//用户说话
     DRAW_PLAYER = 5;//谁画画
     TIME_COUNT = 6;//开始倒计时
+    READY = 7;//准备和取消准备
 }
