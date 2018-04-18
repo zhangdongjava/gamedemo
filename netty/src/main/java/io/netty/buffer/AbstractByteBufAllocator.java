@@ -265,6 +265,7 @@ public abstract class AbstractByteBufAllocator implements ByteBufAllocator {
 
         // If over threshold, do not double but just increase by threshold.
         if (minNewCapacity > threshold) {
+            //补满刚好被4MB整除
             int newCapacity = minNewCapacity / threshold * threshold;
             if (newCapacity > maxCapacity - threshold) {
                 newCapacity = maxCapacity;
@@ -276,6 +277,7 @@ public abstract class AbstractByteBufAllocator implements ByteBufAllocator {
 
         // Not over threshold. Double up to 4 MiB, starting from 64.
         int newCapacity = 64;
+        // 如果4MB大于minNewCapacity，则从64B开始，每次乘以2，直到大于minNewCapacity
         while (newCapacity < minNewCapacity) {
             newCapacity <<= 1;
         }
