@@ -242,6 +242,7 @@ public abstract class AbstractByteBuf extends ByteBuf {
 
     protected final void adjustMarkers(int decrement) {
         int markedReaderIndex = this.markedReaderIndex;
+        //如果小于减少的数值 直接赋值0
         if (markedReaderIndex <= decrement) {
             this.markedReaderIndex = 0;
             int markedWriterIndex = this.markedWriterIndex;
@@ -268,17 +269,19 @@ public abstract class AbstractByteBuf extends ByteBuf {
 
     final void ensureWritable0(int minWritableBytes) {
         ensureAccessible();
+        //小于可写入字段 直接写入
         if (minWritableBytes <= writableBytes()) {
             return;
         }
-
+        //大于可以动态扩容的的长度直接异常
         if (minWritableBytes > maxCapacity - writerIndex) {
             throw new IndexOutOfBoundsException(String.format(
                     "writerIndex(%d) + minWritableBytes(%d) exceeds maxCapacity(%d): %s",
                     writerIndex, minWritableBytes, maxCapacity, this));
         }
-
+        //容量不够可以扩容来满足
         // Normalize the current capacity to the power of 2.
+        // 新的capacity容量计算
         int newCapacity = alloc().calculateNewCapacity(writerIndex + minWritableBytes, maxCapacity);
 
         // Adjust to the new capacity.
@@ -1076,6 +1079,7 @@ public abstract class AbstractByteBuf extends ByteBuf {
 
     @Override
     public ByteBuf writeBytes(ByteBuf src, int srcIndex, int length) {
+        //检验是否可以写入
         ensureWritable(length);
         setBytes(writerIndex, src, srcIndex, length);
         writerIndex += length;
