@@ -1,6 +1,7 @@
 package com.zzz.draw.client.send;
 
 import com.zzz.game.proto.DrawMessageProto;
+import com.zzz.game.proto.TypeMessageEnumProto;
 
 import java.awt.*;
 import java.util.List;
@@ -25,6 +26,6 @@ public class RectSendMessage extends SendMessage {
 
     @Override
     public int getType() {
-        return 3;
+        return TypeMessageEnumProto.MessageType.DRAW_RECT_VALUE;
     }
 }

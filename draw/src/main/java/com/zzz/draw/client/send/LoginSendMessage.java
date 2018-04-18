@@ -1,6 +1,7 @@
 package com.zzz.draw.client.send;
 
 import com.zzz.game.proto.DrawMessageProto;
+import com.zzz.game.proto.TypeMessageEnumProto;
 
 /**
  * Created by zha on 2018/4/17.
@@ -17,6 +18,6 @@ public class LoginSendMessage extends SendMessage {
 
     @Override
     public int getType() {
-        return 1;
+        return TypeMessageEnumProto.MessageType.LOGIN_VALUE;
     }
 }
