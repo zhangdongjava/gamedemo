@@ -1,7 +1,7 @@
 package com.zzz.draw.client.handler;
 
 import com.zzz.draw.ui.DrawPanel;
-import com.zzz.draw.util.Application;
+import com.zzz.draw.server.Application;
 import com.zzz.game.message.MessageHandler;
 import com.zzz.game.message.ProtocolMessage;
 import com.zzz.game.proto.DrawMessageProto;

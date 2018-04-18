@@ -3,7 +3,7 @@ package com.zzz.draw.ui;
 
 import com.zzz.draw.shape.*;
 import com.zzz.draw.shape.Shape;
-import com.zzz.draw.util.Application;
+import com.zzz.draw.server.Application;
 
 import javax.swing.*;
 import java.awt.*;

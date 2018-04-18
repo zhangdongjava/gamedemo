@@ -2,7 +2,7 @@ package com.zzz.draw.client.send;
 
 import com.google.protobuf.MessageLite;
 import com.zzz.draw.client.Client;
-import com.zzz.draw.util.Application;
+import com.zzz.draw.server.Application;
 import com.zzz.game.message.ProtocolMessage;
 
 /**

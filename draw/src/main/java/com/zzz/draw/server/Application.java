@@ -1,6 +1,8 @@
-package com.zzz.draw.util;
+package com.zzz.draw.server;
 
+import com.zzz.draw.client.Client;
 import com.zzz.draw.client.handler.*;
+import com.zzz.draw.ui.MainWindow;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,11 +17,11 @@ public class Application {
     private static Map<Class<?>, Object> beanMap = new HashMap<>();
 
     static {
-        nameMap.put("handler_2", new LineMessageHandler());
-        nameMap.put("handler_3", new RectMessageHandler());
-        nameMap.put("handler_1", new LoginMessageHandler());
-        nameMap.put("handler_4", new UserMessageHandler());
-        nameMap.put("handler_5", new DrawPlayerMessageHandler());
+        putBean("handler_2", new LineMessageHandler());
+        putBean("handler_3", new RectMessageHandler());
+        putBean("handler_1", new LoginMessageHandler());
+        putBean("handler_4", new UserMessageHandler());
+        putBean("handler_5", new DrawPlayerMessageHandler());
     }
 
     public static void putBean(Object bean) {
@@ -62,7 +64,8 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        String reg = "(^\\d+[a-zA-Z]+.*$)|(^[a-zA-Z]+\\d+.*$)";
-        System.out.println("1qdssdsada112232".matches(reg));
+        Client client = new Client();
+        client.content("192.168.10.76",1231);
+        new MainWindow();
     }
 }

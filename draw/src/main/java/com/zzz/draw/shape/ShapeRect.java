@@ -3,7 +3,7 @@ package com.zzz.draw.shape;
 import com.zzz.draw.client.Client;
 import com.zzz.draw.client.send.RectSendMessage;
 import com.zzz.draw.ui.DrawPanel;
-import com.zzz.draw.util.Application;
+import com.zzz.draw.server.Application;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;

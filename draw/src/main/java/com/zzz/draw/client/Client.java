@@ -1,7 +1,7 @@
 package com.zzz.draw.client;
 
 import com.zzz.draw.client.send.LoginSendMessage;
-import com.zzz.draw.util.Application;
+import com.zzz.draw.server.Application;
 import com.zzz.game.codec.CustomMessageDecode;
 import com.zzz.game.codec.CustomMessageEncoder;
 import com.zzz.game.message.ProtocolMessage;

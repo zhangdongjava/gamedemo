@@ -1,7 +1,7 @@
 package com.zzz.draw.ui;
 
 import com.zzz.draw.client.send.MessageSendMessage;
-import com.zzz.draw.util.Application;
+import com.zzz.draw.server.Application;
 
 import javax.swing.*;
 

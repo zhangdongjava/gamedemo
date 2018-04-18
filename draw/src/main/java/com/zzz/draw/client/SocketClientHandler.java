@@ -1,6 +1,6 @@
 package com.zzz.draw.client;
 
-import com.zzz.draw.util.Application;
+import com.zzz.draw.server.Application;
 import com.zzz.game.message.MessageHandler;
 import com.zzz.game.message.ProtocolMessage;
 import io.netty.channel.ChannelHandlerContext;
