@@ -31,6 +31,9 @@ import java.nio.channels.ScatteringByteChannel;
 import static io.netty.util.internal.ObjectUtil.checkNotNull;
 
 /**
+ * 大的字节 java堆 buffer 实现 ,建议使用它的UnpooledByteBufAllocator.heapBuffer(int, int),
+ * Unpooled.buffer(int),Unpooled.wrappedBuffer(byte[])
+ * 而不是显式的调用构造器
  * Big endian Java heap buffer implementation. It is recommended to use
  * {@link UnpooledByteBufAllocator#heapBuffer(int, int)}, {@link Unpooled#buffer(int)} and
  * {@link Unpooled#wrappedBuffer(byte[])} instead of calling the constructor explicitly.
