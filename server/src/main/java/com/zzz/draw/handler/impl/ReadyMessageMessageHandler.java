@@ -38,6 +38,9 @@ public class ReadyMessageMessageHandler extends AbstractMessageHandler {
        		}
 		}
        	Integer id=ServerApplication.context.getBean(PlayerUtil.class).luckyPlayer();
+		if(id == null){
+			return builder.build();
+		}
        	TimeLimitResp.Builder timeBuilder = TimeLimitResp.newBuilder();
        	timeBuilder.setTime(100);
         byte[] buf = timeBuilder.build().toByteArray();
