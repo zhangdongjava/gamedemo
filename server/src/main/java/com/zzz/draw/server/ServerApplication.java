@@ -5,7 +5,10 @@ import io.netty.channel.ChannelHandlerContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -20,11 +23,23 @@ public class ServerApplication {
     private static Map<Integer, UserInfo> infoMap = new ConcurrentHashMap<>();
 
     private static AtomicInteger atomUserId = new AtomicInteger(0);
+    
+    private static List<UserInfo> userInfos = new ArrayList<>();
+    
+    public static int currPlayIndex = 0;
 
-    public static Collection<UserInfo> getUserList(){
+    public static List<UserInfo> getUserInfos() {
+		return userInfos;
+	}
+
+	public static Collection<UserInfo> getUserList(){
         return infoMap.values();
     }
 
+    public static UserInfo getUserInfo(int userId){
+    	return infoMap.get(userId);
+    }
+    
     public static int getNewUserId() {
         return atomUserId.incrementAndGet();
     }
@@ -33,6 +48,7 @@ public class ServerApplication {
         int userId = getNewUserId();
         UserInfo userInfo = new UserInfo(context, userId, name);
         infoMap.put(userId, userInfo);
+        userInfos.add(userInfo);
         return userId;
     }
 
