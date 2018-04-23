@@ -5,4 +5,7 @@
     <bean id="handler_1" class="com.zzz.draw.handler.impl.LoginMessageHandler"></bean>
     <bean id="handler_2" class="com.zzz.draw.handler.impl.LineMessageHandler"></bean>
     <bean id="handler_3" class="com.zzz.draw.handler.impl.RectMessageHandler"></bean>
+    <bean id="handler_4" class="com.zzz.draw.handler.impl.UserMessageMessageHandler"></bean>
+    <bean id="handler_6" class="com.zzz.draw.handler.impl.ReadyMessageMessageHandler"></bean>
+    <bean class="com.zzz.draw.util.PlayerUtil"></bean>
 </beans>
