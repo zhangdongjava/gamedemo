@@ -15,4 +15,4 @@
     <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.23.Final" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:2.5.0" level="project" />
   </component>
-</module>http://return.xjchacheng.com/payapi/toSuccess?total_amount=1.00&timestamp=2018-06-12+22%3A27%3A31&sign=D%2B%2F5DXahu%2BrIosk%2F5GnruPnVl5L72xn33BZAW35NzbugU2Bk%2BhK%2BrhYDi5uDCwsGXsx32hWvbvHY1PuAGE4oQzQ7p4J65TjQPXAaGqfUQJAZxIEdbSU503Ut6rvvAzSvRubWuUYA%2FlGskNeWn4R63q3IFsDJ07Z7gEH6OPNP%2F2Pg6pBVvWUc7W2OKmumy3AJ9laXCCh2bXPnPhAimqErRgBkJvuAsbwk0853i9Oqe%2Fu5sE8KONvMXXDR7rzk3FGsf%2FV7hIeJqzc8Rjo7yi9c06DTsBo7i1e0LtdOe4iRmW4mvKt5TbErfyZTSHa%2FGOoJkf740wXqhcpQTuLUglB4Ow%3D%3D&trade_no=2018061221001004580578733140&sign_type=RSA2&auth_app_id=2018060660269723&charset=utf-8&seller_id=2088131479561669&method=alipay.trade.wap.pay.return&app_id=2018060660269723&out_trade_no=111111111&version=1.0
+</module>
